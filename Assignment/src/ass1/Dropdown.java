@@ -11,10 +11,11 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Dropdown {
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.navigate().to("http://test02.cignition365.com/channel-partner/");
+		System.out.println("Login Completed successfully");
 		driver.findElement(By.xpath("//input[@value='Register']")).click();
 		WebElement dropdown =driver.findElement(By.id("MainContent_MainContentSection_C006_ddlLanguages"));
 		Select select = new Select(dropdown);
